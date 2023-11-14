@@ -1,17 +1,38 @@
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 40px 80px 0 80px;
+    justify-content: space-between;
+    margin: 20px 15px 0 15px;
+
+    .logoComputer {
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: flex;
+        };
+    }
+
+    .logoMobile {
+        @media screen and (min-width: 768px) {
+            display: none;
+        };
+    }
 
     nav {
-        font-size: 24px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 500;
 
+        @media screen and (min-width: 768px) {
+            font-size: 24px;
+        };
+
         a {
             color: #FF6060;
-            padding-left: 57px;
+            padding-left: 26px;
         }
-    }
+    };
+
+    @media screen and (min-width: 768px) {
+        margin: 40px 80px 0 80px;
+    };
 };
