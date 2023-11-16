@@ -1,0 +1,30 @@
+.cardItem {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        width: 30%;
+    };
+
+    img {
+        object-fit: cover;
+        height: 255px;
+        width: 100%;
+        border-radius: 10px;
+
+        @media screen and (min-width: 768px) {
+            height: 340px;
+        };
+    }
+
+    h2 {
+        position: absolute;
+        bottom: 5px;
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 500;
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+}

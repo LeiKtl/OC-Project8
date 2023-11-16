@@ -1,0 +1,30 @@
+.banner {
+    position: relative;
+
+    img {
+        height: 111px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+
+        @media screen and (min-width: 768px) {
+            height: 223px;
+            border-radius: 25px;
+        };
+    }
+
+    p {
+        font-size: 24px;
+        font-weight: 500;
+        color: #fff;
+        position: absolute;
+        top: 2px;
+        left: 16px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 48px;
+            top: 35px;
+            left: 22%;
+        };
+    }
+};
