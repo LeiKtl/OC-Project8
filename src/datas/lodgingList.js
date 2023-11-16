@@ -1,3 +1,4 @@
+export const lodgingList = 
 [
 	{
 		"id": "c67ab8a7",
