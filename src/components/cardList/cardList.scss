@@ -1,16 +1,18 @@
 .cards {
 
     .cardList {
-        display: flex;
+        display: grid;
+        /**display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: center;**/
         list-style-type: none;
         padding: 0;
         gap: 15px;
 
         @media screen and (min-width: 768px) {
-            gap: 35px;
-            padding: 40px 0;
+            gap: 50px;
+            padding: 40px 50px;
+            grid-template-columns: 1fr 1fr 1fr;
         };
     }
     
