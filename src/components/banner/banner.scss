@@ -1,15 +1,25 @@
 .banner {
     position: relative;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 110px;
+    margin-bottom: 25px;
+
+    @media screen and (min-width: 768px) {
+        height: 223px;
+        border-radius: 25px;
+    };
+    
 
     img {
-        height: 111px;
+        height: 110px;
         width: 100%;
         object-fit: cover;
-        border-radius: 10px;
+        opacity: 0.7;
 
         @media screen and (min-width: 768px) {
             height: 223px;
-            border-radius: 25px;
         };
     }
 
@@ -18,13 +28,16 @@
         font-weight: 500;
         color: #fff;
         position: absolute;
-        top: 2px;
-        left: 16px;
+        top: 15px;
+        width: 100%;
+        text-align: left;
+        padding: 0 10px;
+        box-sizing: border-box;
 
         @media screen and (min-width: 768px) {
             font-size: 48px;
             top: 35px;
-            left: 22%;
+            text-align: center;
         };
     }
 };
