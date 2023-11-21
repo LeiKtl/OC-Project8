@@ -21,9 +21,11 @@ header {
         font-size: 12px;
         font-style: normal;
         font-weight: 500;
+        text-transform: uppercase;
 
         @media screen and (min-width: 768px) {
             font-size: 24px;
+            text-transform: none;
         };
 
         a {

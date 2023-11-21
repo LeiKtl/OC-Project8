@@ -1,10 +1,9 @@
-import bannerHome from '../../assets/homeBanner.svg';
 import './banner.scss';
 
 function Banner(props) {
     return (
         <div className='banner'>
-            <img src={bannerHome} alt="Home page banner" />
+            <img src={props.src} alt={props.alt} />
             <p>{props.tagLine}</p>
         </div>
     )
