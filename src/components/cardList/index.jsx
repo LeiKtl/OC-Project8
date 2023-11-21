@@ -1,12 +1,12 @@
 import './cardList.scss';
-import { lodgingList } from '../../datas/lodgingList';
 import CardItem from '../cardItem';
 
-function CardList() {
+
+function CardList({data}) {
     return (
         <div className='cards'>
             <ul className='cardList'>
-                {lodgingList.map(({ id, title, cover }) => (
+                {data.map(({id, cover, title}) => (
                     <CardItem 
                         key={id}
                         cover={cover}

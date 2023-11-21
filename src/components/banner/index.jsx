@@ -1,11 +1,11 @@
 import bannerHome from '../../assets/homeBanner.svg';
 import './banner.scss';
 
-function Banner() {
+function Banner(props) {
     return (
         <div className='banner'>
             <img src={bannerHome} alt="Home page banner" />
-            <p>Chez vous, partout et ailleurs</p>
+            <p>{props.tagLine}</p>
         </div>
     )
 };
