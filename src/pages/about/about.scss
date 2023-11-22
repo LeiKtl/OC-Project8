@@ -1,9 +1,10 @@
-.containerDropdown {
+.containerDropdowns {
     display: flex;
     flex-direction: column;
     gap: 20px;
 
     @media screen and (min-width: 768px) {
         margin: auto 8%;
+        gap: 30px;
     };
 }
