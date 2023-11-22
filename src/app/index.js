@@ -6,7 +6,6 @@ import Sheet from '../pages/accomodationSheet';
 import About from '../pages/about';
 import Error from '../pages/error'
 import Footer from '../components/footer';
-import { lodgingList } from '../datas/lodgingList';
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-            <Route path="housing" element={<Sheet src="" />}/>
+            <Route path="/accomodationSheet/:id" element={<Sheet src="" />}/>
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Error />} />
         </Routes>

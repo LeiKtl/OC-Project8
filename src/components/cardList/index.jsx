@@ -9,6 +9,7 @@ function CardList({data}) {
                 {data.map(({id, cover, title}) => (
                     <CardItem 
                         key={id}
+                        id={id}
                         cover={cover}
                         title={title}
                     />
