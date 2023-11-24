@@ -9,7 +9,7 @@ function About() {
     return (
         <main>
             <Banner src={bannerAbout} alt="Bannière de la page a propos"/>
-            <div className='containerDropdowns'>
+            <div className='about-container-dropdown'>
                 {aboutList.map(({title, description, id}) => (
                     <Dropdown key={id} title={title} textContent={description} />
                 ))}    

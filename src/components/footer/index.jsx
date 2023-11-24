@@ -3,9 +3,9 @@ import './footer.scss';
 
 function Footer() {
     return (
-        <footer>
-            <img src={logo} alt="Logo Kasa" />
-            <p>© 2020 Kasa. All rights reserved</p>
+        <footer className='footer'>
+            <img className='footer__img' src={logo} alt="Logo Kasa" />
+            <p className='footer__content'>© 2020 Kasa. All rights reserved</p>
         </footer>
     )
 };

@@ -7,7 +7,7 @@
     align-items: center;
     margin: 110px auto;
 
-    .errorNumber {
+    &__number {
         font-size: 96px;
         font-weight: 700;
         
@@ -16,7 +16,7 @@
         };
     }
 
-    p {
+    &__content {
         font-size: 18px;
         font-weight: 500;
         /**width: 260px;**/
@@ -28,7 +28,7 @@
         };
     }
 
-    a {
+    &__link {
         font-size: 14px;
         font-weight: 500;
         text-decoration-line: underline;

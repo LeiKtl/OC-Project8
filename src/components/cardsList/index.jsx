@@ -1,13 +1,13 @@
-import './cardList.scss';
-import CardItem from '../cardItem';
+import './cardsList.scss';
+import Card from '../card';
 
 
-function CardList({data}) {
+function CardsList({data}) {
     return (
         <div className='cards'>
-            <ul className='cardList'>
+            <ul className='cards-list'>
                 {data.map(({id, cover, title}) => (
-                    <CardItem 
+                    <Card 
                         key={id}
                         id={id}
                         cover={cover}
@@ -19,4 +19,4 @@ function CardList({data}) {
     )
 };
 
-export default CardList;
+export default CardsList;

@@ -3,8 +3,8 @@ import './banner.scss';
 function Banner(props) {
     return (
         <div className='banner'>
-            <img src={props.src} alt={props.alt} />
-            <p>{props.tagLine}</p>
+            <img className='banner__img' src={props.src} alt={props.alt} />
+            <p className='banner__content'>{props.tagLine}</p>
         </div>
     )
 };

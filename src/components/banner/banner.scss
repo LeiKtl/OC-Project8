@@ -12,7 +12,7 @@
     };
     
 
-    img {
+    &__img {
         height: 110px;
         width: 100%;
         object-fit: cover;
@@ -23,7 +23,7 @@
         };
     }
 
-    p {
+    &__content {
         font-size: 24px;
         font-weight: 500;
         color: #fff;

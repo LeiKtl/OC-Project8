@@ -1,10 +1,10 @@
-.cardItem {
+.card {
     position: relative;
     border-radius: 10px;
     width: 100%;
     
 
-    .gradient {
+    &--gradient {
         height: 255px;
         width: 100%;
         position: absolute;
@@ -16,7 +16,7 @@
         };
     }
 
-    img {
+    &__img {
         object-fit: cover;
         height: 255px;
         width: 100%;
@@ -28,7 +28,7 @@
         };
     }
 
-    h2 {
+    &__title {
         position: absolute;
         bottom: 5px;
         color: #FFF;

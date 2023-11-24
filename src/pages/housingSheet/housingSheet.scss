@@ -1,0 +1,14 @@
+.sheet {
+    &__dropdown {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 13px;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            gap: 76px;
+            font-size: 18px;
+        };
+    }
+}
