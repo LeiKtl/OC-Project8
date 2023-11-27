@@ -1,4 +1,4 @@
-export const lodgingList = 
+export const housingList = 
 [
 	{
 		"id": "c67ab8a7",
