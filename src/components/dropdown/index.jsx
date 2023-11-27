@@ -8,16 +8,25 @@ function Dropdown(props) {
 
     function toggle() {
         setIsClosed(!isClosed);
+
     };
 
     return (
-        <div className='containerDropdown'>
-            <div className='dropdownBtn' onClick={() => toggle()}>
-                <h2>{props.title}</h2>
-                <img src={arrow} alt="Flèche pour ouvrir le contenant" />
+        <section className='container_dropdown'>
+            <div className='container_dropdown__btn' onClick={() => toggle()}>
+                <h2 className='container_dropdown__title'>{props.title}</h2>
+                <img className={isClosed ? 'container_dropdown__arrow' : 'container_dropdown__arrow container_dropdown__arrow--active'} src={arrow} alt="Flèche pour ouvrir le contenant" />
             </div>
-            <p className={isClosed ? 'content hide' : 'content'}>{props.textContent}</p>
-        </div>
+            
+            {props.title === "Description" ? (
+                <p className={isClosed ? 'container_dropdown__content container_dropdown__content--hide' : 'container_dropdown__content'}>{props.textContent}</p>
+            ) : (
+                <ul className={isClosed ? 'container_dropdown__content container_dropdown__content--hide' : 'container_dropdown__content'}>
+                    {props.textContent}
+                </ul> 
+            )}     
+           
+        </section>
     ) 
 };
 

@@ -1,9 +1,8 @@
-.containerDropdown {
+.container_dropdown {
     border-radius: 5px;
     width: 100%;
 
-    .dropdownBtn {
-        width: 100%;
+    &__btn {
         height: 30px;
         border-radius: 5px;
         background-color: #FF6060;
@@ -12,9 +11,15 @@
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+        transition: 0.5s;
+    
+        @media screen and (min-width: 768px) {
+            height: 52px;
+        };
+    }
 
-        h2 {
-            font-size: 13px;
+    &__title {
+        font-size: 13px;
             font-weight: 500;
             padding-left: 5px;
 
@@ -22,27 +27,42 @@
                 font-size: 24px;
                 padding-left: 10px;
             };
-        }
-    
-        @media screen and (min-width: 768px) {
-            height: 52px;
-        };
     }
 
-    .content {
+    &__arrow {
+        width: 20px;
+        height: 20px;
+        padding: 10px 8px;
+
+        @media screen and (min-width: 768px) {
+            width: 32px;
+            height: 32px;
+            padding: 10px 15px;
+        };
+
+        &--active{
+            transform: rotate(-180deg);
+            transition: transform 0.5s;
+
+        }
+    }
+
+    &__content {
         font-size: 12px;
         color: #FF6060;
         padding: 13px;
         margin: 0;
         background-color: #F6F6F6;
+        transition: 0.5s ease-in-out;
+        list-style-type: none;
         
         @media screen and (min-width: 768px) {
             font-size: 18px;
             padding: 20px;
         };
-    }
 
-    .hide {
-        display: none;
+        &--hide {
+            display: none;
+        }
     }
 }
