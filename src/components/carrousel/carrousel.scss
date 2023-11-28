@@ -1,0 +1,65 @@
+.carrousel {
+    position: relative;
+
+    &__img {
+        height: 255px;
+        width: 100%;
+        border-radius: 10px;
+        position: relative;
+        object-fit: cover;
+        @media screen and (min-width: 768px) {
+            height: 415px;
+            border-radius: 25px;
+        };
+    }
+
+    &__arrow {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+
+        &--right {
+            right: 5px;
+            @media screen and (min-width: 768px) {
+                right: 15px;
+            };
+        }
+
+        &--left {
+            left: 5px;
+            @media screen and (min-width: 768px) {
+                left: 15px;
+            };
+        }
+
+        &--right,
+        &--left {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 45%;
+            @media screen and (min-width: 768px) {
+                height: 80px;
+                width: 45px;
+            };
+        }
+    }
+
+    &__pagination {
+        position: relative;
+        bottom: 40px;
+        left: 50%;
+        color: #FFF;
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: inline-block;
+        };   
+        
+        
+    }
+
+    .hide {
+        display: none;
+        
+    }
+}
