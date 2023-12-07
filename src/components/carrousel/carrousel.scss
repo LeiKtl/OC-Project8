@@ -14,9 +14,6 @@
     }
 
     &__arrow {
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
 
         &--right {
             right: 5px;
@@ -38,9 +35,11 @@
             height: 24px;
             position: absolute;
             top: 45%;
+            cursor: pointer;
             @media screen and (min-width: 768px) {
                 height: 80px;
                 width: 45px;
+                top: 40%;
             };
         }
     }

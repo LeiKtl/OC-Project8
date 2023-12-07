@@ -29,8 +29,11 @@ function Carrousel(props) {
     return (
         <div className='carrousel'>
             <img className='carrousel__img' src={props.src[picture]} alt={props.alt} />
-            <img className={props.numbSlides === 1 ? 'hide' : 'carrousel__arrow carrousel__arrow--right'} src={arrowRight} alt="Flèche droite" onClick={nextPicture}/>
-            <img className={props.numbSlides === 1 ? 'hide' : 'carrousel__arrow carrousel__arrow--left'} src={arrowLeft} alt="Flèche gauche" onClick={previewPicture}/>
+            <div className='carrousel__arrow'>
+                <img className={props.numbSlides === 1 ? 'hide' : 'carrousel__arrow--right'} src={arrowRight} alt="Flèche droite" onClick={nextPicture}/>
+                <img className={props.numbSlides === 1 ? 'hide' : 'carrousel__arrow--left'} src={arrowLeft} alt="Flèche gauche" onClick={previewPicture}/>
+            </div>
+            
             <span className={props.numbSlides === 1 ? 'hide' : 'carrousel__pagination'}>{picture +1}/{props.numbSlides}</span>
         </div>
     )
