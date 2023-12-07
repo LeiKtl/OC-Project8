@@ -1,4 +1,4 @@
-import './router.scss';
+import './routerApp.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from '../components/header';
 import Home from '../pages/home';
@@ -7,7 +7,7 @@ import About from '../pages/about';
 import Error from '../pages/error'
 import Footer from '../components/footer';
 
-function App() {
+function RouterApp() {
   return (
     <div className="App">
       <Router>
@@ -24,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default RouterApp;
