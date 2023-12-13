@@ -1,5 +1,7 @@
+@import '../../variables.scss';
+
 .error {
-    color: #FF6060;
+    color: $primary-color;
     text-align: center;
     gap: 113px;
     display: flex;
@@ -9,20 +11,17 @@
 
     &__number {
         font-size: 96px;
-        font-weight: 700;
-        
+        font-weight: 700;  
         @media screen and (min-width: 768px) {
             font-size: 288px;
         };
-    }
+    };
 
     &__content {
         font-size: 18px;
         font-weight: 500;
-        /**width: 260px;**/
         line-height: 143%;
         text-align: center;
-
         @media screen and (min-width: 768px) {
             font-size: 36px;
         };
@@ -31,17 +30,16 @@
             @media screen and (min-width: 768px) {
                 display: none;
             };
-        }
-    }
+        };
+    };
 
     a {
         font-size: 14px;
         font-weight: 500;
         text-decoration-line: underline;
         color: #FF6060;
-
         @media screen and (min-width: 768px) {
             font-size: 18px;
         };
-    }
-}
+    };
+};

@@ -1,8 +1,16 @@
+@import '../../variables.scss';
+
 .header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     margin: 20px 15px 0 15px;
+    gap: 20px;
+    @media screen and (min-width: 340px) {
+        flex-direction: row;
+        gap: 0;
+    };
 
     &__logo {
         &--computer {
@@ -10,13 +18,13 @@
             @media screen and (min-width: 768px) {
                 display: flex;
             };
-        }
+        };
 
         &--mobile {
             @media screen and (min-width: 768px) {
                 display: none;
             };
-        }
+        };
     };
     
     &__navbar {
@@ -27,21 +35,18 @@
         display: flex;
         flex-direction: row;
         gap: 26px;
-
         @media screen and (min-width: 768px) {
             font-size: 24px;
             text-transform: none;
-        }
+        };
 
         &--home,
         &--about {
-            color: #FF6060;
+            color: $primary-color;
             &--underline {
-                border-bottom: solid 1px #FF6060;    
-            }
-        }
-
-        
+                border-bottom: solid 1px $primary-color;    
+            };
+        };    
     };
 
     @media screen and (min-width: 768px) {

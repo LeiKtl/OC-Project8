@@ -1,13 +1,15 @@
+@import '../../variables.scss';
+
 .sheet {
     &_all_informations {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        color: #FF6060;
+        color: $primary-color;
         @media screen and (min-width: 768px) {
             flex-direction: row;
         };
-    }
+    };
 
     &__informations {
         &--title {
@@ -18,7 +20,8 @@
             @media screen and (min-width: 768px) {
                 font-size: 36px;
             };
-        }
+        };
+
         &--content {
             font-size: 14px;
             font-weight: 500;
@@ -27,7 +30,8 @@
                 font-size: 18px;
                 margin: 0 0 20px 0;
             };
-        }
+        };
+
         &--tag-list {
             list-style-type: none;
             margin: 0;
@@ -35,12 +39,11 @@
             display: flex;
             gap: 10px;
             margin-bottom: 5px;
-
             @media screen and (min-width: 768px) {
                 margin-bottom: 30px;
             };
-        }
-    }
+        };
+    };
 
     &__member {
         display: flex;
@@ -57,7 +60,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
-        }
+        };
+
         &--img {
             width: 32px;
             height: 32px;
@@ -66,7 +70,8 @@
                 width: 64px;
                 height: 64px;
             };
-        }
+        };
+
         &--name {
             width: 50%;
             font-size: 12px;
@@ -75,8 +80,8 @@
             @media screen and (min-width: 768px) {
                 font-size: 18px;
             };
-        }
-    }
+        };
+    };
 
     &__dropdown {
         display: flex;
@@ -88,5 +93,5 @@
             gap: 76px;
             font-size: 18px;
         };
-    }
-}
+    };
+};

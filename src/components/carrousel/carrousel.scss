@@ -1,3 +1,6 @@
+@import '../../variables.scss';
+
+
 .carrousel {
     position: relative;
 
@@ -11,7 +14,7 @@
             height: 415px;
             border-radius: 25px;
         };
-    }
+    };
 
     &__arrow {
 
@@ -20,14 +23,14 @@
             @media screen and (min-width: 768px) {
                 right: 15px;
             };
-        }
+        };
 
         &--left {
             left: 5px;
             @media screen and (min-width: 768px) {
                 left: 15px;
             };
-        }
+        };
 
         &--right,
         &--left {
@@ -41,24 +44,21 @@
                 width: 45px;
                 top: 40%;
             };
-        }
-    }
+        };
+    };
 
     &__pagination {
         position: relative;
         bottom: 40px;
         left: 50%;
-        color: #FFF;
+        color: $ternary-color;
         display: none;
         @media screen and (min-width: 768px) {
             display: inline-block;
-        };   
-        
-        
-    }
+        };       
+    };
 
     .hide {
-        display: none;
-        
-    }
-}
+        display: none;   
+    };
+};
