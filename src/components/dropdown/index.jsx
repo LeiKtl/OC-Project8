@@ -1,31 +1,61 @@
 import './dropdown.scss';
 import arrow from '../../assets/arrowDropdown.svg';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 function Dropdown(props) {
-
+    const dropdownRef = useRef(null);
+    const dropdownHeaderRef = useRef(null);
+    const dropdownContentRef = useRef(null);
     const [isClosed, setIsClosed] = useState(true);
 
     function toggle() {
-        setIsClosed(!isClosed);
+        setIsClosed(!isClosed)
 
+        window.setTimeout(() => {
+            console.log(dropdownRef.current.style.height);
+            dropdownRef.current.style.height = 'auto';
+            
+        }, 300);
+
+        const headerHeight = dropdownHeaderRef.current.offsetHeight;
+        const contentHeight = dropdownContentRef.current.offsetHeight;
+
+        if(!isClosed) {
+            dropdownContentRef.current.style.position = 'absolute';
+            console.log(dropdownRef.current.style.height)
+            dropdownRef.current.style.height = `${headerHeight + contentHeight}px`;
+            window.setTimeout(() => {
+                dropdownRef.current.style.height = `${headerHeight}px`;
+            }, 0);
+            console.log(dropdownRef.current.style.height);
+        } else {
+            dropdownContentRef.current.style.position = 'relative';
+            console.log(dropdownRef.current.style.height)
+            dropdownRef.current.style.height = `${headerHeight}px`;
+            console.log(dropdownRef.current.style.height)
+            window.setTimeout(() => {
+                dropdownRef.current.style.height = `${headerHeight + contentHeight}px`;
+            }, 0);
+        }
     };
+    
 
     return (
-        <section className='container_dropdown'>
-            <div className='container_dropdown__btn' onClick={() => toggle()}>
-                <h2 className='container_dropdown__title'>{props.title}</h2>
-                <img className={isClosed ? 'container_dropdown__arrow' : 'container_dropdown__arrow container_dropdown__arrow--active'} src={arrow} alt="Flèche pour ouvrir le contenant" />
+        <section className='container_dropdown' onClick={() => toggle()} ref={dropdownRef} >
+            <div className='container_dropdown__btn' ref={dropdownHeaderRef} >
+                <h2 className='container_dropdown__title' >{props.title}</h2>
+                <img className={isClosed ? 'container_dropdown__arrow container_dropdown__arrow--close' : 'container_dropdown__arrow container_dropdown__arrow--open'} src={arrow} alt="Flèche pour ouvrir le contenant" />
             </div>
-            
-            {props.title === "Description" ? (
-                <p className={isClosed ? 'container_dropdown__content container_dropdown__content--hide' : 'container_dropdown__content'}>{props.textContent}</p>
-            ) : (
-                <ul className={isClosed ? 'container_dropdown__content container_dropdown__content--hide' : 'container_dropdown__content'}>
+
+            <div className={isClosed ? 'container_dropdown__content container_dropdown__content--notActive' : 'container_dropdown__content container_dropdown__content--active'} ref={dropdownContentRef}>
+            {props.title === "Equipements" ? (
+                <ul className={isClosed ? 'container_dropdown__content--text' : 'container_dropdown__content--text'}>
                     {props.textContent}
-                </ul> 
-            )}     
-           
+                </ul>
+            ) : (
+                <p className={isClosed ? 'container_dropdown__content--text' : 'container_dropdown__content--text '}>{props.textContent} </p>
+            )}   
+            </div>
         </section>
     ) 
 };
