@@ -12,7 +12,6 @@ function Dropdown(props) {
         setIsClosed(!isClosed)
 
         window.setTimeout(() => {
-            console.log(dropdownRef.current.style.height);
             dropdownRef.current.style.height = 'auto';
             
         }, 300);
@@ -22,17 +21,13 @@ function Dropdown(props) {
 
         if(!isClosed) {
             dropdownContentRef.current.style.position = 'absolute';
-            console.log(dropdownRef.current.style.height)
             dropdownRef.current.style.height = `${headerHeight + contentHeight}px`;
             window.setTimeout(() => {
                 dropdownRef.current.style.height = `${headerHeight}px`;
             }, 0);
-            console.log(dropdownRef.current.style.height);
         } else {
             dropdownContentRef.current.style.position = 'relative';
-            console.log(dropdownRef.current.style.height)
             dropdownRef.current.style.height = `${headerHeight}px`;
-            console.log(dropdownRef.current.style.height)
             window.setTimeout(() => {
                 dropdownRef.current.style.height = `${headerHeight + contentHeight}px`;
             }, 0);

@@ -12,10 +12,9 @@ function Sheet () {
     const navigate = useNavigate()
     
     const housing = housingList.find((house) => house.id === id);
-    console.log(housing)
+    
     useEffect(() => {
         if(!housing) {
-            console.log("ca fonctionne")
             navigate("/error");
         }
     }, [id,housing, navigate])  
