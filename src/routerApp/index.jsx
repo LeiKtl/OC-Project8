@@ -1,4 +1,4 @@
-import './routerApp.scss';
+import './routerApp.scss'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from '../components/header';
 import Home from '../pages/home';
@@ -17,6 +17,7 @@ function RouterApp() {
             <Route path="/accomodationSheet/:id" element={<Sheet />}/>
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Error />} />
+          <Route path="/error" element={<Error />} />
         </Routes>
         <Footer />
       </Router>

@@ -22,7 +22,7 @@ function Sheet () {
     
     return (!housing) ? (<div></div>) : (
         <main className='sheet'>
-            <Carrousel numbSlides={housing.pictures.length} src={housing.pictures} alt="Photos de " />
+            <Carrousel numbSlides={housing.pictures.length} src={housing.pictures} alt={housing.title} />
             <section className='sheet_all_informations'>
                 <section className='sheet__informations'>
                     <h2 className='sheet__informations--title'>{housing.title}</h2>
