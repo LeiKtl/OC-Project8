@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import arrow from '../../assets/arrowDropdown.svg';
 import { useState, useRef } from 'react';
 
+/**@description Retrieves the size of the element's button as well as its content to create the animation*/
 function Dropdown(props) {
     const dropdownRef = useRef(null);
     const dropdownHeaderRef = useRef(null);
@@ -45,11 +46,11 @@ function Dropdown(props) {
 
             <div className={isClosed ? 'container_dropdown__content container_dropdown__content--notActive' : 'container_dropdown__content container_dropdown__content--active'} ref={dropdownContentRef}>
             {props.title === "Equipements" ? (
-                <ul className={isClosed ? 'container_dropdown__content--text' : 'container_dropdown__content--text'}>
+                <ul className='container_dropdown__content--text'>
                     {props.textContent}
                 </ul>
             ) : (
-                <p className={isClosed ? 'container_dropdown__content--text' : 'container_dropdown__content--text '}>{props.textContent} </p>
+                <p className='container_dropdown__content--text'>{props.textContent} </p>
             )}   
             </div>
         </section>

@@ -7,6 +7,8 @@ import Stars from '../../components/stars';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
+/**@description Retrieves the housing id in order to display the data for the correct housing, otherwise return to the error page
+ */
 function Sheet () {
     const { id } = useParams();
     const navigate = useNavigate()

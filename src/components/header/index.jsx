@@ -3,8 +3,8 @@ import logo from '../../assets/LOGOcomputerLogo.svg';
 import logoMobile from '../../assets/LOGOmobileLogo.svg';
 import './header.scss';
 
+/**@description Returns to the chosen pages, when clicking on the link in the navigation bar*/
 function Header() {
-
     const  {pathname} = useLocation();
 
     return (

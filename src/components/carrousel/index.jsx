@@ -4,8 +4,8 @@ import arrowRight from '../../assets/Vector.svg';
 import arrowLeft from '../../assets/Vectorleft.svg';
 import { useState } from 'react';
 
+/**@description Retrieves the number of images in the data, and allows you to return to the first image when you are at the end, and vice versa. If there is only 1 image, the arrows and pagination are removed. Pagination is not visible on mobile.*/
 function Carrousel(props) {
-
     const [picture, setPicture] = useState(0);
 
     function nextPicture() {
@@ -34,7 +34,6 @@ function Carrousel(props) {
                 <img className={props.numbSlides === 1 ? 'hide' : 'carrousel__arrow--right'} src={arrowRight} alt="Flèche droite" onClick={nextPicture}/>
                 <img className={props.numbSlides === 1 ? 'hide' : 'carrousel__arrow--left'} src={arrowLeft} alt="Flèche gauche" onClick={previewPicture}/>
             </div>
-            
             <span className={props.numbSlides === 1 ? 'hide' : 'carrousel__pagination'}>{picture +1}/{props.numbSlides}</span>
         </div>
     )

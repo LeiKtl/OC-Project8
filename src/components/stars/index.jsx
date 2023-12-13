@@ -2,6 +2,7 @@ import star from '../../assets/star.svg';
 import PropTypes from 'prop-types';
 import './stars.scss';
 
+/**@description Retrieves the number of stars assigned to create a condition on them and change their color*/
 function Stars(props) {
     const rate = [];
 
