@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'
 import './card.scss';
 
 function Card({cover, title, id}) {
@@ -12,6 +13,12 @@ function Card({cover, title, id}) {
         </li>
     </Link>
     )
-}
+};
+
+Card.propTypes = {
+    cover : PropTypes.string,
+    title : PropTypes.string,
+    id : PropTypes.string,
+};
 
 export default Card;

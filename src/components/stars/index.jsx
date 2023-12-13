@@ -1,4 +1,5 @@
 import star from '../../assets/star.svg';
+import PropTypes from 'prop-types';
 import './stars.scss';
 
 function Stars(props) {
@@ -15,6 +16,10 @@ function Stars(props) {
             {rate}
         </div>
     ) 
-}
+};
+
+Stars.propTypes = {
+    data : PropTypes.number,
+};
 
 export default Stars

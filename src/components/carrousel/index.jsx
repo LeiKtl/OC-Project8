@@ -1,4 +1,5 @@
 import './carrousel.scss';
+import PropTypes from 'prop-types';
 import arrowRight from '../../assets/Vector.svg';
 import arrowLeft from '../../assets/Vectorleft.svg';
 import { useState } from 'react';
@@ -37,6 +38,12 @@ function Carrousel(props) {
             <span className={props.numbSlides === 1 ? 'hide' : 'carrousel__pagination'}>{picture +1}/{props.numbSlides}</span>
         </div>
     )
+}
+
+Carrousel.propTypes = {
+    numbSlides : PropTypes.number,
+    src : PropTypes.array,
+    alt : PropTypes.string,
 }
 
 export default Carrousel;

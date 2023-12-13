@@ -1,4 +1,5 @@
 import './cardsList.scss';
+import PropTypes from 'prop-types';
 import Card from '../card';
 
 
@@ -17,6 +18,10 @@ function CardsList({data}) {
             </ul>
         </div>
     )
+};
+
+CardsList.propTypes = {
+    data : PropTypes.array,
 };
 
 export default CardsList;

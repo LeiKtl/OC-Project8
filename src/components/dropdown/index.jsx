@@ -1,4 +1,5 @@
 import './dropdown.scss';
+import PropTypes from 'prop-types';
 import arrow from '../../assets/arrowDropdown.svg';
 import { useState, useRef } from 'react';
 
@@ -53,6 +54,10 @@ function Dropdown(props) {
             </div>
         </section>
     ) 
+};
+
+Dropdown.propTypes = {
+    title : PropTypes.string,
 };
 
 export default Dropdown;
