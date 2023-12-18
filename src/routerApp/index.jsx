@@ -1,5 +1,5 @@
 import './routerApp.scss'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Header from '../components/header';
 import Home from '../pages/home';
 import Sheet from '../pages/housingSheet';
@@ -16,7 +16,7 @@ function RouterApp() {
           <Route path="/" element={<Home />} />
             <Route path="/accomodationSheet/:id" element={<Sheet />}/>
           <Route path="/about" element={<About />} />
-          <Route path="*" element={<Error />} />
+          <Route path="*" element={<Navigate to='/error'/>} />
           <Route path="/error" element={<Error />} />
         </Routes>
         <Footer />
